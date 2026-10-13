@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 107539021}
   - component: {fileID: 107539023}
   - component: {fileID: 107539025}
+  - component: {fileID: 107539026}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -368,6 +369,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c198825f-f11d-466d-b830-cae9591feb12
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107539026}
+        m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
+        m_MethodName: OnAim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e5ca5e07-e539-48c0-b6a7-051c26cfd69a
+    m_ActionName: 'Player/Aim[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -460,6 +477,19 @@ MonoBehaviour:
   regenerationRate: 15
   regenerationDelay: 1.5
   exhaustionRecovery: 20
+--- !u!114 &107539026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107539017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d052f7098c9d36a43983e006a36c5f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
+  animator: {fileID: 1000364821}
 --- !u!1 &119578915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.134
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1319,6 +1349,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3139378901625609143, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139378901625609143, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3588849560313704984, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -1373,6 +1411,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 15f9386bbf320d84690063bc9310a562, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5897364122268946584, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
@@ -1431,6 +1481,11 @@ PrefabInstance:
 --- !u!4 &1000364819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
+  m_PrefabInstance: {fileID: 1000364818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1000364821 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 180db5f135f114c4c832eae5ffd140b8, type: 3}
   m_PrefabInstance: {fileID: 1000364818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1005513055
