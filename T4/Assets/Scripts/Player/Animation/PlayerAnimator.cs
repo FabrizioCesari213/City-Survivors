@@ -39,6 +39,8 @@ public class PlayerAnimator : MonoBehaviour
 
         float moveY = Mathf.Clamp(
             localVelocity.z / referenceSpeed, -1f, 1f);
+            
+        
 
         animator.SetFloat(
             "MoveX", moveX, 0.1f, Time.deltaTime);
