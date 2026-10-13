@@ -34,8 +34,8 @@ ModelImporter:
       name: Crouchtostand
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 0
-      lastFrame: 19
+      firstFrame: 1.8
+      lastFrame: 7.7
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

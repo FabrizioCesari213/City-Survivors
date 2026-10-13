@@ -11,6 +11,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private PlayerMovement movement;
     private CharacterController controller;
+    private bool aimHeld;
 
     private void Awake()
     {
@@ -50,6 +51,8 @@ public class PlayerAnimator : MonoBehaviour
 
         animator.SetBool(
             "IsSprinting", movement.IsSprinting);
+        animator.SetBool(
+            "IsAiming", aimHeld && !movement.IsSprinting);
 
         animator.SetBool(
             "IsCrouching", movement.IsCrouching);
@@ -65,8 +68,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (context.performed || context.canceled)
         {
-            animator.SetBool(
-                "IsAiming", context.ReadValueAsButton());
+            aimHeld = context.ReadValueAsButton();
         }
     }
 }
