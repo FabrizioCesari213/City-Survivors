@@ -39,6 +39,22 @@ public class PlayerMovement : MonoBehaviour
     private float verticalVelocity;
 
 
+    public bool IsCrouching => isCrouching;
+    public bool IsSprinting =>
+        sprintHeld && 
+        moveInput.sqrMagnitude > 0.01f && 
+        controller.isGrounded && 
+        !isCrouching &&
+        stamina.CanSprint;
+
+    public float VerticalSpeed => verticalVelocity;
+    
+    public float AnimationReferenceSpeed =>
+        isCrouching ? crouchSpeed :
+        IsSprinting ? sprintSpeed : 
+        moveSpeed;
+
+
 
     public void OnMove(InputAction.CallbackContext context){
          moveInput = context.ReadValue<Vector2>();
