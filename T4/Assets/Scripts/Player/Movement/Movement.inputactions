@@ -25,15 +25,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Slide",
-                    "type": "Button",
-                    "id": "d832f010-cc4d-4b77-b2fe-216c5dc1b73b",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Look",
                     "type": "Value",
                     "id": "28faf41c-d76f-4d31-90f3-788e0f67f483",
@@ -136,17 +127,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "2dcd3739-aef1-4792-a59a-a8b36d777917",
-                    "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Slide",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
